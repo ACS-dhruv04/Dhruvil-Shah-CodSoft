@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Comapatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing page</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <section>
+            <div class="circle" id="home"></div>
+            <header>
+                <a href="#"><img src="coffee_1.png" class="logo"></a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#order">Order Now</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>It's not just Coffee<br>It's <span>Feeling</span></h2>
+                    <p>Coffee is a beverage brewed from roasted coffee beans.
+                    Darkly colored, bitter, and slightly acidic, coffee has a 
+                    stimulating effect on humans, primarily due to its caffeine content. 
+                    It has the highest sales in the world market for hot drinks.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="imgBox">
+                    <img src="coldbrew.png" class="coffee">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="coldbrew.png" onclick="imgSlider('img1.png');changeCircleColor('#8b4513')"></li>
+                <li><img src="Frappuccino.png" onclick="imgSlider('img2.png');changeCircleColor('#cd853f')"></li>
+                <li><img src="latte.png" onclick="imgSlider('img3.png');changeCircleColor('rgb(129, 78, 41)')"></li> 
+            </ul>
+        </section>
+        <section class="order" id="order">
+            <div class="order-text">
+                <h2>Order <span>Now</span></h2>
+                    <div class="order-list">
+                        <li><i class='bx bxs-send bx-flip-vertical'></i> dhruvil1304@gmail.com</li>
+                        <li><i class='bx bxs-phone-call'></i> 9687443288</li>
+                    </div>
+                    <div class="order-icons">
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="#"><i class='bx bxl-snapchat' style="--i:3"></i></a>
+                    </div>
+            </div>
+            <div class="order-form">
+                <form action="">
+                    <select id="coffee" style="color: #7d7b7b;">
+                    <option value="selectcoffee">--Select Coffee--</option>
+                    <option value="coldbrew">Cold Brew</option>
+                    <option value="frappuccino">Frappuccino</option>
+                    <option value="latte">Latte</option>
+                    </select>
+                    <input type="email" placeholder="Enter Email" required>
+                    <input type="" placeholder="Enter Your Number">
+                    <textarea name="" id="" cols="10" placeholder="Special Message" required></textarea>
+                    <input type="submit" value="Order" class="send">
+                </form>
+            </div>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.coffee').src = anything;
+            }
+            function changeCircleColor(color){
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+        </script>
+    </body>
+</html>
